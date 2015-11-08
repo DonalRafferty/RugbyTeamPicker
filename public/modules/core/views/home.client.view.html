@@ -1,0 +1,86 @@
+<section data-ng-controller="HomeController" data-ng-init="getTeam()">
+    <div id="wrapper" class="col-md-8 col-md-offset-2" style="margin-top: 1em; padding:1em;">
+        <h1>Game Day Team</h1>
+        <h4>Props</h4>
+
+        <div data-ng-repeat="prop in team.props" class="row">
+            <div class="col-md-3">{{prop.name}}</div>
+            <div class="col-md-3">{{prop.position}}</div>
+            <div class="col-md-3">{{prop.squad.club}}</div>
+            <div class="col-md-3">{{prop.squad.id}}</div>
+        </div>
+        <h4>Hooker</h4>
+
+        <div class="row">
+            <div class="col-md-3">{{team.hooker.name}}</div>
+            <div class="col-md-3">{{team.hooker.position}}</div>
+            <div class="col-md-3">{{team.hooker.squad.club}}</div>
+            <div class="col-md-3">{{team.hooker.squad.id}}</div>
+        </div>
+        <h4>Locks</h4>
+
+        <div data-ng-repeat="lock in team.locks" class="row">
+            <div class="col-md-3">{{lock.name}}</div>
+            <div class="col-md-3">{{lock.position}}</div>
+            <div class="col-md-3">{{lock.squad.club}}</div>
+            <div class="col-md-3">{{lock.squad.id}}</div>
+        </div>
+        <h4>Flankers</h4>
+
+        <div data-ng-repeat="flanker in team.flankers" class="row">
+            <div class="col-md-3">{{flanker.name}}</div>
+            <div class="col-md-3">{{flanker.position}}</div>
+            <div class="col-md-3">{{flanker.squad.club}}</div>
+            <div class="col-md-3">{{flanker.squad.id}}</div>
+        </div>
+        <h4>Number Eight</h4>
+
+        <div class="row">
+            <div class="col-md-3">{{team.numEight.name}}</div>
+            <div class="col-md-3">{{team.numEight.position}}</div>
+            <div class="col-md-3">{{team.numEight.squad.club}}</div>
+            <div class="col-md-3">{{team.numEight.squad.id}}</div>
+        </div>
+        <h4>Scrum Half</h4>
+
+        <div class="row">
+            <div class="col-md-3">{{team.scrumHalf.name}}</div>
+            <div class="col-md-3">{{team.scrumHalf.position}}</div>
+            <div class="col-md-3">{{team.scrumHalf.squad.club}}</div>
+            <div class="col-md-3">{{team.scrumHalf.squad.id}}</div>
+        </div>
+        <h4>Out Half</h4>
+
+        <div class="row">
+            <div class="col-md-3">{{team.outHalf.name}}</div>
+            <div class="col-md-3">{{team.outHalf.position}}</div>
+            <div class="col-md-3">{{team.outHalf.squad.club}}</div>
+            <div class="col-md-3">{{team.outHalf.squad.id}}</div>
+        </div>
+        <h4>Centres</h4>
+
+        <div data-ng-repeat="centre in team.centres" class="row">
+            <div class="col-md-3">{{centre.name}}</div>
+            <div class="col-md-3">{{centre.position}}</div>
+            <div class="col-md-3">{{centre.squad.club}}</div>
+            <div class="col-md-3">{{centre.squad.id}}</div>
+        </div>
+        <h4>Wingers</h4>
+
+        <div data-ng-repeat="winger in team.wingers" class="row">
+            <div class="col-md-3">{{winger.name}}</div>
+            <div class="col-md-3">{{winger.position}}</div>
+            <div class="col-md-3">{{winger.squad.club}}</div>
+            <div class="col-md-3">{{winger.squad.id}}</div>
+        </div>
+        <h4>Full Back</h4>
+
+        <div class="row">
+            <div class="col-md-3">{{team.fullBack.name}}</div>
+            <div class="col-md-3">{{team.fullBack.position}}</div>
+            <div class="col-md-3">{{team.fullBack.squad.club}}</div>
+            <div class="col-md-3">{{team.fullBack.squad.id}}</div>
+        </div>
+        <div>{{error}}</div>
+    </div>
+</section>

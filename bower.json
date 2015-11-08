@@ -1,0 +1,19 @@
+{
+  "name": "great-circle-distance",
+  "version": "0.0.1",
+  "description": "An example application for the great circle distance calculation",
+  "dependencies": {
+    "angular": "~1.2",
+    "angular-animate": "~1.2",
+    "angular-bootstrap": "~0.11.2",
+    "angular-mocks": "~1.2",
+    "angular-resource": "~1.2",
+    "angular-sanitize": "~1.2",
+    "angular-ui-router": "~0.2.11",
+    "angular-ui-utils": "~0.1.1",
+    "bootstrap": "~3"
+  },
+  "resolutions": {
+    "angular": "~1.2.7"
+  }
+}
