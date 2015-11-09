@@ -3,7 +3,7 @@
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
-	var applicationModuleName = 'hpim-portal';
+	var applicationModuleName = 'RugbyPicker';
 	var applicationModuleVendorDependencies = ['ngResource', 'ngAnimate',  'ngSanitize',  'ui.router', 'ui.bootstrap', 'ui.utils'];
 
 	// Add a new vertical module
