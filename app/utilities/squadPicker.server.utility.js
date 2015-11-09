@@ -16,7 +16,7 @@ var fileRetrieval = require('./fileRetrieval.server.utility'), //File Retrieval 
  */
 var getSquadInfo = function(squadArray, player){
     squadArray.forEach(function(squad){
-        if(squad.id == player.squad_id){
+        if(squad.id === player.squad_id){
             player.squad = squad;
             return;
         }
@@ -88,12 +88,12 @@ var pickGameDay15 = function(squadArray, playerArray){
  * @param callback
  */
 var pickSquad = function(callback){
-    fileRetrieval.retrieveCustomerFile(function(data){ //Get the JSON data
+    fileRetrieval.retrieveSquadFile(function(data){ //Get the JSON data
         var squadArray = data.squads;
         var playerArray = data.athletes;
         var squad = pickGameDay15(squadArray, playerArray); //Call helper functions to build 15 team players
         callback(squad); //Send the swaud data back
-    })
+    });
 };
 
 exports.pickSquad = pickSquad;

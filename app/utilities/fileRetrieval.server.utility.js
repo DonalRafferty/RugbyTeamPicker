@@ -12,7 +12,7 @@ var https = require('https');
  * the results to the next part of the chain.
  * @param injectedCallback
  */
-exports.retrieveCustomerFile = function(injectedCallback){
+exports.retrieveSquadFile = function(injectedCallback){
     var options = { //options object for holding URL data
         host: 'https://gist.githubusercontent.com',
         path: '/colmdoyle/33d1f67043d1333f8786/raw/e78be32d28e96c9888b95461f1ad14ddfc4fc602/athletes.json'

@@ -26,7 +26,7 @@
         }));
 
         it('should retrieve the list of ', function() {
-            // Test expected POST request
+            // Test expected GET request
             $httpBackend.expectGET('/squads').respond(200, [exampleTeamObject]);
 
             scope.getTeam();
@@ -35,17 +35,5 @@
             // Test scope value
             expect(scope.team).toEqual([exampleTeamObject]);
         });
-        //it.skip('should return an error message', function() {
-        //    // Test expected POST request
-        //    $httpBackend.expectPOST('/squads').respond(400, {
-        //        message: 'Error'
-        //    });
-        //
-        //    scope.getNearestCustomers();
-        //    $httpBackend.flush();
-        //
-        //    // Test scope value
-        //    expect(scope.error).toEqual('Please supply a distance');
-        //});
     });
 })();

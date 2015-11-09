@@ -57,13 +57,20 @@ describe('Squad route tests', function () {
                     done(custSaveErr);
                 });
         });
-    });
-    describe.skip('Negative cases', function () {
-        it('should return status 400 with error message', function (done) {
+        it('should return with players in a particular JSON structure', function (done) {
             agent.get('/squads')
-                .expect(400)
+                .expect(200)
                 .end(function (custSaveErr, custSaveRes) {
-                    //Assertion goes here
+                    expect(custSaveRes.body.props[0]).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.hooker).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.locks[0]).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.flankers[0]).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.numEight).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.scrumHalf).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.outHalf).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.centres[0]).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.wingers[0]).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
+                    expect(custSaveRes.body.fullBack).to.include.keys('avatar_url', 'squad_id', 'country', 'last_played', 'name', 'position', 'is_injured', 'id', 'squad');
                     // Call the assertion callback
                     done(custSaveErr);
                 });

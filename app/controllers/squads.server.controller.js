@@ -18,5 +18,5 @@ var squadPicker = require('./../utilities/squadPicker.server.utility'); //Refere
 exports.list = function (req, res) {
     squadPicker.pickSquad(function(data){
         res.jsonp(data);
-    })
+    });
 };
